@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-behavior: smooth;
+  --primary-color: #ffffff;
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --accent-color: #333333;
+}
+
+body {
+  @apply m-0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+  color: var(--primary-color);
+}
+
+/* Section Headers */
+.section-title {
+  @apply text-3xl font-bold mb-6;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  @apply block w-24 h-1 mt-2;
+  background-color: var(--primary-color);
+}
+
+/* Container */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Transitions */
+.transition-base {
+  @apply transition-all duration-300 ease-in-out;
+}

@@ -1,0 +1,46 @@
+/* Split Animation */
+.split-panel {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(79 70 229);
+  z-index: 50;
+}
+
+.split-panel-top {
+  top: 0;
+  left: 0;
+}
+
+.split-panel-bottom {
+  bottom: 0;
+  left: 0;
+}
+
+/* Fade Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}

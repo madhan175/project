@@ -1,0 +1,48 @@
+/* Black and White Theme */
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: #000000;
+  --color-gray: #808080;
+  --color-light-gray: #f0f0f0;
+}
+
+body {
+  @apply bg-black text-white;
+}
+
+/* Typography */
+.section-title {
+  @apply text-3xl font-bold mb-6 text-white;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  @apply block w-24 h-1 bg-white mt-2;
+}
+
+/* Cards and Containers */
+.content-container {
+  @apply bg-black bg-opacity-90;
+}
+
+.card {
+  @apply bg-gray-900 border border-gray-800;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  @apply border-white;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons and Interactive Elements */
+.interactive-element {
+  @apply border border-white text-white;
+  transition: all 0.3s ease;
+}
+
+.interactive-element:hover {
+  @apply bg-white text-black;
+}

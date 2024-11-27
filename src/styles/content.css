@@ -1,0 +1,77 @@
+/* Main Content Styles */
+.content-section {
+  @apply container mx-auto px-4 py-16;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* About Section */
+.about-text {
+  @apply text-lg leading-relaxed;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* Skills Grid */
+.skills-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+}
+
+.skill-item {
+  @apply p-4 rounded-lg;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
+  backdrop-filter: blur(10px);
+  transform: translateY(0);
+  transition: all 0.2s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Projects Grid */
+.projects-grid {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.project-card {
+  @apply rounded-lg overflow-hidden;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.project-image {
+  @apply w-full h-48 object-cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  filter: grayscale(0%);
+}
+
+.project-content {
+  @apply p-6;
+}
+
+.project-title {
+  @apply text-xl font-bold mb-2;
+  color: var(--primary-color);
+}
+
+.project-description {
+  color: var(--text-color);
+  opacity: 0.9;
+}
